@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Himanshu Pandey — Portfolio
 
-## Getting Started
+Personal portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. Showcases projects, experience, skills (including MLOps), and professional certifications.
 
-First, run the development server:
+## Tech stack
+
+- Next.js 14 (App Router)
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) 18.17 or newer
+- npm (comes with Node.js)
+
+## Local development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command        | Description              |
+| -------------- | ------------------------ |
+| `npm run dev`  | Development server       |
+| `npm run build`| Production build         |
+| `npm run start`| Run production build     |
+| `npm run lint` | ESLint                   |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+portfolio/
+├── app/                 # Pages & API routes
+├── components/          # UI sections
+├── lib/                 # Data & utilities
+├── public/certificates/ # Certificate images
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Certificate cards load from `public/certificates/` via `/api/certificates`. Metadata (titles) is in `lib/data.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy (Vercel — recommended)
 
-## Deploy on Vercel
+1. Push this repo to GitHub (see below).
+2. Import the repo on [vercel.com](https://vercel.com).
+3. Framework preset: **Next.js** (auto-detected).
+4. Deploy — no environment variables required.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Push to GitHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run these commands from the `portfolio` folder (where `package.json` is):
+
+```powershell
+cd "C:\Users\22f30\OneDrive\Documents\Desktop\portfolio_hm\portfolio"
+
+# Optional: rename branch to main (GitHub default)
+git branch -M main
+
+# Stage all project files
+git add .
+
+# First commit with your full portfolio (adjust message if you like)
+git commit -m "Add portfolio site with projects, skills, and certifications"
+
+# Create a new empty repo on GitHub, then add remote (replace YOUR_USERNAME and REPO_NAME)
+git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+
+# Push
+git push -u origin main
+```
+
+If `origin` already exists, update it:
+
+```powershell
+git remote set-url origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+git push -u origin main
+```
+
+## Notes
+
+- Do **not** commit `.env` files with secrets. Use `.env.example` as a template.
+- `node_modules` and `.next` are ignored automatically.
+- Certificate images in `public/certificates/` are included in the repo. Large files may slow clones; compress images if needed before pushing.
+
+## Author
+
+**Himanshu Pandey** — [GitHub](https://github.com/Anzay12) · [LinkedIn](https://linkedin.com/in/himanshu-pandey12)

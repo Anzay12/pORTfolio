@@ -36,8 +36,8 @@ export default function About() {
             </div>
             <div>
               <p className="font-medium text-white">IIT Madras</p>
-              <p className="text-sm text-zinc-400">B.Sc. Data Science & Applications</p>
-              <p className="mt-1 text-xs text-zinc-500">Sept 2023 – Aug 2026</p>
+              <p className="text-sm text-zinc-400">BS in Data Science & Applications</p>
+              <p className="mt-1 text-xs text-zinc-500">Sept 2022 – Aug 2026</p>
             </div>
             <div className="mt-2 border-t border-white/10 pt-4">
               <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Coursework</p>
